@@ -20,7 +20,7 @@ module.exports.run = async function({ api, event, args }) {
 	if (!args[0]) return sendMessage('Please provide a question first.');
 
 	const prompt = args.join(" ");
-	const url = `https://deku-rest-api.replit.app/gpt4?prompt=${encodeURIComponent(prompt)}&uid=${event.senderID}`;
+	const url = `https://priyansh-ai.onrender.com/gemini/ai?query=${encodeURIComponent(prompt)}&uid=${event.senderID}`;
 
 	try {
 		const response = await get(url);
